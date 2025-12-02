@@ -1,14 +1,8 @@
-# visualizer.py
 import matplotlib.pyplot as plt
 import numpy as np
 from typing import List
 
 def visualize_sudoku(puzzle: List[List[int]], solution: List[List[int]], title: str = "Sudoku"):
-    """
-    Hiển thị puzzle (đầu vào) và solution (kết quả) trên cùng một bảng 9x9.
-    - puzzle: ma trận 9x9 với 0 cho ô trống
-    - solution: ma trận 9x9 là lời giải (hoặc None)
-    """
     N = 9
     fig, ax = plt.subplots(figsize=(6, 6))
     ax.set_xlim(0, N)
@@ -21,12 +15,11 @@ def visualize_sudoku(puzzle: List[List[int]], solution: List[List[int]], title: 
     ax.invert_yaxis()
     ax.grid(True, which='both', linewidth=1)
 
-    # kẻ đường viền block dày hơn
     for i in range(0, N+1, 3):
         ax.axhline(i, linewidth=2)
         ax.axvline(i, linewidth=2)
 
-    # in số: giữ số gốc đậm hơn để phân biệt
+    # số đã có in đậm
     for r in range(N):
         for c in range(N):
             num = solution[r][c] if solution is not None else puzzle[r][c]

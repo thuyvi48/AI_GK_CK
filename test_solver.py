@@ -1,4 +1,3 @@
-# test_solver.py
 import unittest
 from SAT_solver import SudokuSolver
 from visualizer import visualize_sudoku
@@ -50,7 +49,7 @@ class TestSudokuSolver(unittest.TestCase):
 
         # Case 5: Vô nghiệm
         [
-            [1, 1, 0, 0, 0, 0, 0, 0, 0],  # trùng số trong hàng
+            [1, 1, 0, 0, 0, 0, 0, 0, 0], 
             [0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0],
